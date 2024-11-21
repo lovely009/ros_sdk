@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="ins_pkg" type="ins_data" name="ins_data_pub" output="screen"  >
+      <param name="port" type="string" value="/dev/wheeltec_ins622"/>
+      <param name="Baudrate" type="int" value="921600"/>
+  </node>
+  <node pkg="ins_pkg" type="data_transform" name="data_transform" />
+
+</launch>
+

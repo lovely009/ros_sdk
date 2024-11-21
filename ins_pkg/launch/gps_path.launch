@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find ins_pkg)/launch/ins_data.launch" />
+
+  <node name="gps_path_node" pkg="ins_pkg" type="gps_path" output="screen"/>	
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ins_pkg)/rviz/gps_path.rviz"/>
+</launch>
